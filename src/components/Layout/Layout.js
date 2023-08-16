@@ -1,5 +1,4 @@
 import React from "react";
-import { Toolbar } from "@mui/material";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import AppBarComponent from "./AppBarComponent";
 import CollapseableSidebar from "./Sidebar/CollapseableSidebar";
@@ -8,7 +7,7 @@ import { useThemeContext } from "../../utils/ThemeContext";
 import Box from "@mui/material/Box";
 
 
-const Layout = ({ children, title, toolbarHeight }) => {
+const Layout = ({ children, title }) => {
   const { currentTheme, open, toggleDrawer } = useThemeContext();
   
   return (
@@ -29,7 +28,6 @@ const Layout = ({ children, title, toolbarHeight }) => {
             overflow: "auto",
           }}
         >
-          <Toolbar sx={{ height: toolbarHeight }} />
           {children}
           {/* <Footer /> */}
         </Box>
